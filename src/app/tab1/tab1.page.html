@@ -1,15 +1,11 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>
-      Mozzart Rezultati
-    </ion-title>
+    <ion-title>Mozzart Rezultati</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content class="ion-padding">
-  <ion-button expand="full" (click)="loadResults()">
-    Učitaj rezultate
-  </ion-button>
+  <ion-button expand="full" (click)="loadResults()">Preuzmi završene mečeve</ion-button>
 
   <ion-grid *ngIf="matches.length > 0">
     <ion-row>
