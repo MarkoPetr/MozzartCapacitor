@@ -1,17 +1,28 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
     <ion-title>
-      Tab 1
+      Mozzart Rezultati
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content class="ion-padding">
+  <ion-button expand="full" (click)="loadResults()">
+    Učitaj rezultate
+  </ion-button>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <ion-grid *ngIf="matches.length > 0">
+    <ion-row>
+      <ion-col><strong>Domaćin</strong></ion-col>
+      <ion-col><strong>Gost</strong></ion-col>
+      <ion-col><strong>Rezultat</strong></ion-col>
+    </ion-row>
+    <ion-row *ngFor="let match of matches">
+      <ion-col>{{ match.home }}</ion-col>
+      <ion-col>{{ match.away }}</ion-col>
+      <ion-col>{{ match.score }}</ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <p *ngIf="matches.length === 0 && loading">Učitavanje...</p>
 </ion-content>
