@@ -9,7 +9,9 @@ import { Tab1PageRoutingModule } from './tab1-routing.module';
 
 @NgModule({
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
+    CUSTOM_ELEMENTS_SCHEMA,
   imports: [IonicModule, 
+    IonicModule,
     IonicModule,
     CommonModule,
     FormsModule,
