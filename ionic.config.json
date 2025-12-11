@@ -1,0 +1,7 @@
+{
+  "name": "MozzartAppCapacitor",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
