@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Mozzart Završeni Mečevi</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-button expand="full" (click)="fetchResults()">Preuzmi rezultate</ion-button>
+
+  <ion-list>
+    <ion-item *ngFor="let match of matches">
+      {{ match.date }}: {{ match.home }} - {{ match.away }} {{ match.score }}
+    </ion-item>
+  </ion-list>
+
+  <ion-webview [src]="mozUrl" style="height: 400px;"></ion-webview>
+</ion-content>
